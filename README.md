@@ -4,27 +4,27 @@ This is a work of generating the embedding in Att-biNTN.
 
 For more details, please refer to the reference.
 
-![Screen Shot 2021-07-05 at 7.23.01 PM](/Users/alicelee/Library/Application Support/typora-user-images/Screen Shot 2021-07-05 at 7.23.01 PM.png)
+![Imgur](https://i.imgur.com/12oa9WF.png)
 
-![image-20210705194202995](/Users/alicelee/Library/Application Support/typora-user-images/image-20210705194202995.png)
+![Imgur](https://i.imgur.com/XO053aX.png)
 
 ## Description
 
-|-- embedding
-    |-- README (this file)
-    |-- readfile.py
-    |-- tag.py
-    |-- tag2Vec.py
-    |-- model.py
-    |-- results
-        |-- tdt.pkl (generated from readfile.py) 
-        |-- tagging.pkl (generated from tag.py)
-        |-- ttv.pkl  (generated from tag2Vec.py)
-    |-- 20061020_20131126_bloomberg_news
-        |-- 2006-10-20
-            |-- news1
-            |-- news2
-            |-- ...
+
+|--README (this file) <br />
+|--readfile.py <br /> 
+|--tag.py <br />
+|--tag2Vec.py <br />
+|--model.py <br />
+|--results <br />
+&emsp;|--tdt.pkl (generated from readfile.py) <br />
+&emsp;|--tagging.pkl (generated from tag.py) <br />
+&emsp;|--ttv.pkl  (generated from tag2Vec.py) <br />
+|--20061020_20131126_bloomberg_news <br />
+&emsp;|--2006-10-20 <br />
+&emsp;&emsp;|--news1 <br />
+&emsp;&emsp;|--news2 <br />
+&emsp;&emsp;|--... <br /> 
 
 ## Methodology
 
@@ -36,17 +36,19 @@ For more details, please refer to the reference.
 
 - *S1* is computed by the following method, where *e1* is the subject, *r* is the relation, *T1* is a bilinear tensor, *f* represents *tanh*, and *b* is the bias vector
 
-  $S_1 = f(e_1^TT_1^{[1:k]}r + W\begin{bmatrix} e_1 \\r  \end{bmatrix}+ b )$
+    <img src="https://render.githubusercontent.com/render/math?math=S_1 = f(e_1^TT_1^{[1:k]}r %2B W\begin{bmatrix} e_1 \\r  \end{bmatrix} %2B b)">
+    
+    Also, 
+    <img src="https://render.githubusercontent.com/render/math?math=g(E_1, R) = g(S_1) = U^TS_1">
 
-  $g(E_1, R) = g(S_1) = U^TS_1$
 
-- S2, S3, S4, C, C_inv are computed similarly
+- *S2, S3, S4, C, Cinv* are computed similarly
 
 - For training goal, we randomly replace either Subject or Object with any word of all the titles in the data and generate the loss function as below:
-
-  $L=max(0, 1-G(E)+G(E^r ))+λ||Φ||_2^2$
-
-  $where\ G(E)=g(C)+g(C_{inv} )$
+    
+    <img src="https://render.githubusercontent.com/render/math?math=L=max(0, 1-G(E)+G(E^r )) %2B \lambda||\phi||_2^2">
+    where 
+    <img src="https://render.githubusercontent.com/render/math?math=G(E)=g(C) %2B g(C_{inv} )">
 
 ## Usage
 
