@@ -1,6 +1,6 @@
 # Generating News Embedding using Bloomberg News for Att-biNTN
 
-This is a work of generating the embedding in Att-biNTN.
+This is an implementation of generating the embedding in Att-biNTN.
 
 For more details, please refer to the reference.
 
