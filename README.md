@@ -1,5 +1,7 @@
 # Generating News Embedding using Bloomberg News for Att-biNTN
 
+[GitHub Link](https://github.com/itsalicelee/News_Embedding_For_Att-biNTN)
+
 This is an implementation of generating the embedding in Att-biNTN.
 
 For more details, please refer to the reference.
@@ -45,7 +47,7 @@ For more details, please refer to the reference.
 - *S2, S3, S4, C, Cinv* are computed similarly
 
 - For training goal, we randomly replace either Subject or Object with any word of all the titles in the data and generate the loss function as below:
-    
+  
     <img src="https://render.githubusercontent.com/render/math?math=L=max(0, 1-G(E)+G(E^r )) %2B \lambda||\phi||_2^2">
     where 
     <img src="https://render.githubusercontent.com/render/math?math=G(E)=g(C) %2B g(C_{inv} )">
