@@ -1,12 +1,14 @@
 # Generating News Embedding using Bloomberg News for Att-biNTN
-
-[GitHub Link](https://github.com/itsalicelee/News_Embedding_For_Att-biNTN)
-
-[Colab Link][https://colab.research.google.com/drive/1Zsy4ppI2HUzj8v5fZJMjr42KaUnNK0-9?usp=sharing]
-
 This is an implementation of generating the embedding in Att-biNTN.
 
 For more details, please refer to the reference.
+## Links
+
+[GitHub Link](https://github.com/itsalicelee/News_Embedding_For_Att-biNTN)
+
+[Colab Link](https://colab.research.google.com/drive/1Zsy4ppI2HUzj8v5fZJMjr42KaUnNK0-9?usp=sharing)
+
+
 
 ![Imgur](https://i.imgur.com/12oa9WF.png)
 
