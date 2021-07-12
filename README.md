@@ -62,6 +62,7 @@ For more details, please refer to the reference.
   - ```python model.py ```
 
 - Finally, using results/record, we can further make prediction using the model proposed in the work
+- NOTICE: We can use the command ```python read.py [file.pkl]``` to print out the files in ./results
 
 ## Reference
 
